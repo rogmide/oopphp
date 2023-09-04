@@ -34,4 +34,12 @@ class Transaction
     {
         return $this->amount;
     }
+
+    // can be use to close connections
+    // clean up files and stuff
+    // we see if this has a usecase for it
+    public function __destruct()
+    {
+        // echo 'Desctruct ' . $this->description . '<br />';
+    }
 }

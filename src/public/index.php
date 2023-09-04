@@ -9,10 +9,15 @@ require_once 'Transaction.php';
 //     ->applyDiscount(10);;
 
 // chainning methos
-$amount = (new Transaction(100, 'Transaction 1'))
+$transaction1 = (new Transaction(100, 'Transaction 1'))
     ->addTax(8)
-    ->applyDiscount(10)
-    ->getAmount();
+    ->applyDiscount(10);
+// ->getAmount();
+
+// $transaction2 = (new Transaction(200, 'Transaction 1'))
+//     ->addTax(8)
+//     ->applyDiscount(15);
+// ->getAmount();
 
 // access to the properties
 // $transaction->addTax(8);
@@ -20,4 +25,17 @@ $amount = (new Transaction(100, 'Transaction 1'))
 // $transaction->addTax(8)->applyDiscount(10);
 
 // var_dump($transaction->getAmount());
-var_dump($amount);
+// var_dump($transaction1->getAmount(), $transaction2->getAmount());
+
+// var_dump($transaction1);
+
+$str = '{"a":1, "b":2, "c":3}';
+
+$obj = json_decode($str);
+
+// var_dump($obj);
+var_dump($obj->a);
+echo '<br />';
+var_dump($obj->b);
+echo '<br />';
+var_dump($obj->c);

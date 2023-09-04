@@ -39,3 +39,11 @@ echo '<br />';
 var_dump($obj->b);
 echo '<br />';
 var_dump($obj->c);
+
+$arr = [1, 2, 3];
+
+$obj1 = (object)$arr;
+echo '<br />';
+var_dump($obj1);
+echo '<br />';
+var_dump($obj1->{1});

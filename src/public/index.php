@@ -73,16 +73,31 @@ require __DIR__ . '/../vendor/autoload.php';
 
 require './user.php';
 
-use Basic\Profile\User;
-use App\Enums\Status;
+require '../app/Static_L/static_learn.php';
 
-// $user = new User();
-// echo User::STATUS_PAID;
-// echo '<br />';
-// echo $user::STATUS_PENDING;
-// echo '<br />';
-// echo User::class;
-// $user->setStatus(Status::DECLINE);
+// use Basic\Profile\User;
+use App\Static_L\Static_Learn;
+
+$newLearn = new Static_Learn();
+$newLearn1 = new Static_Learn();
+$newLearn2 = new Static_Learn();
+
+// var_dump(Static_Learn::$count);
+var_dump(Static_Learn::getCount());
+
+
+
+
+
+
+
+// use App\Enums\Status;
+// // $user = new User();
+// // echo User::STATUS_PAID;
+// // echo '<br />';
+// // echo $user::STATUS_PENDING;
+// // echo '<br />';
+// // echo User::class;
+// // $user->setStatus(Status::DECLINE);
 // var_dump($user);
-
-var_dump(new User());
+// var_dump(new User());

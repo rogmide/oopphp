@@ -71,26 +71,19 @@ require __DIR__ . '/../vendor/autoload.php';
 // var_dump($obj1->{1});
 
 
-require './user.php';
+// require './user.php';
 
-require '../app/Static_L/static_learn.php';
+// require '../app/Static_L/static_learn.php';
 
-// use Basic\Profile\User;
-use App\Static_L\Static_Learn;
+// // use Basic\Profile\User;
+// use App\Static_L\Static_Learn;
 
-$newLearn = new Static_Learn();
-$newLearn1 = new Static_Learn();
-$newLearn2 = new Static_Learn();
+// $newLearn = new Static_Learn();
+// $newLearn1 = new Static_Learn();
+// $newLearn2 = new Static_Learn();
 
-// var_dump(Static_Learn::$count);
-var_dump(Static_Learn::getCount());
-
-
-
-
-
-
-
+// // var_dump(Static_Learn::$count);
+// var_dump(Static_Learn::getCount());
 // use App\Enums\Status;
 // // $user = new User();
 // // echo User::STATUS_PAID;
@@ -101,3 +94,12 @@ var_dump(Static_Learn::getCount());
 // // $user->setStatus(Status::DECLINE);
 // var_dump($user);
 // var_dump(new User());
+require '../app/Transaction_2.php';
+
+use App\Transaction_2\Transaction;
+
+$transaction = new Transaction(25);
+
+// $transaction->setAmount(125);
+
+$transaction->process();

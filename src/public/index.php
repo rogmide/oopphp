@@ -94,12 +94,30 @@ require __DIR__ . '/../vendor/autoload.php';
 // // $user->setStatus(Status::DECLINE);
 // var_dump($user);
 // var_dump(new User());
-require '../app/Transaction_2.php';
+// require '../app/Transaction_2.php';
 
-use App\Transaction_2\Transaction;
+// use App\Transaction_2\Transaction;
 
-$transaction = new Transaction(25);
+// $transaction = new Transaction(25);
 
-// $transaction->setAmount(125);
+// // $transaction->setAmount(125);
 
-$transaction->process();
+// $transaction->process();
+
+require '../app/Toaster.php';
+require '../app/Toaster_Pro.php';
+
+use App\Toaster;
+use App\ToasterPro;
+
+$toaster = new Toaster();
+$toasterpro = new ToasterPro();
+
+// $toaster->addSlice('bread');
+// $toaster->toast();
+
+$toasterpro->addSlice('Bread');
+$toasterpro->addSlice('bread');
+$toasterpro->addSlice('bread');
+$toasterpro->toastBagle('somebeagle');
+$toasterpro->toast();

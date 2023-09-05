@@ -2,14 +2,18 @@
 
 // phpinfo();
 
+require __DIR__ . '/../vendor/autoload.php';
+
 require_once 'Transaction.php';
 
-spl_autoload_register(function ($class) {
-    $path = __DIR__ . '/../' . lcfirst(str_replace('\\', '/', $class) . '.php');
-    echo $path;
-    var_dump($class);
-    require $path;
-});
+// spl_autoload_register(function ($class) {
+//     $path = __DIR__ . '/../' . lcfirst(str_replace('\\', '/', $class) . '.php');
+//     echo $path;
+//     var_dump($class);
+//     require $path;
+// });
+
+
 
 // Need to look more into this
 // Forgot to require the class

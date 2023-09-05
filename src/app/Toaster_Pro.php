@@ -22,4 +22,10 @@ class ToasterPro extends Toaster
             echo ($i + 1) . ': Toasting Bagle Option ' . $slice . PHP_EOL;
         }
     }
+
+    public function addSlice($slice)
+    {
+        // Custom Code before the parent method
+        parent::addSlice($slice);
+    }
 }

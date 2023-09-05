@@ -2,15 +2,24 @@
 
 // phpinfo();
 
+
+
 require_once 'Transaction.php';
 
 // Need to look more into this
-// use Notification\CustomerProfile;
-// var_dump(new CustomerProfile());
+// Forgot to require the class
+// -> is basaclly . in javascript object
+
+require_once './Paddle/CustomerProfile.php';
+
+use Notification\CustomerProfile as CProfile;
+
+// We can use "as" and set a name after
+var_dump(new CProfile());
 
 // $transaction = (new Transaction(100, 'Transaction 1'))
 //     ->addTax(8)
-//     ->applyDiscount(10);;
+//     ->applyDiscount(10);
 
 // chainning methos
 $transaction1 = (new Transaction(100, 'Transaction 1'))

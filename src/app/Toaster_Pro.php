@@ -5,11 +5,14 @@ namespace App;
 class ToasterPro extends Toaster
 {
 
-    public int $size = 4;
+    public int $size;
     // you can only override public properties
 
     public function __construct()
     {
+        // need to inizializate the parent construct
+        parent::__construct();
+        $this->size = 4;
     }
 
     public function toastBagle()

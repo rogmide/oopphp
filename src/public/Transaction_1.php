@@ -1,5 +1,7 @@
 <?php
 
+namespace trans_1;
+
 class Transaction_1
 {
     private  $amount;

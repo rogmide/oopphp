@@ -4,6 +4,10 @@
 
 require_once 'Transaction.php';
 
+// Need to look more into this
+// use Notification\CustomerProfile;
+// var_dump(new CustomerProfile());
+
 // $transaction = (new Transaction(100, 'Transaction 1'))
 //     ->addTax(8)
 //     ->applyDiscount(10);;

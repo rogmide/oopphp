@@ -2,7 +2,7 @@
 
 namespace App\Abstraction;
 
-class Field
+abstract class Field
 {
     protected string $name;
 
@@ -11,8 +11,5 @@ class Field
         $this->name = $name;
     }
 
-    public function render()
-    {
-        return '';
-    }
+    abstract public function render();
 }

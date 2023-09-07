@@ -122,22 +122,20 @@ require __DIR__ . '/../vendor/autoload.php';
 // $toasterpro->toastBagle('somebeagle');
 // $toasterpro->toast();
 
-require '../app/Abstraction/Field.php';
+
 require '../app/Abstraction/Text.php';
 require '../app/Abstraction/Checkbox.php';
-require '../app/Abstraction/Booleans.php';
 require '../app/Abstraction/Radio.php';
 
-use App\Abstraction\Booleans;
+
+
 use App\Abstraction\Checkbox;
-use App\Abstraction\Field;
 use App\Abstraction\Radio;
 use App\Abstraction\Text;
 
 $fields = [
-    new Field('baseField'),
+
     new Text('textField'),
-    new Booleans('booleanField'),
     new Checkbox('checkboxField'),
     new Radio('radioField'),
 ];

@@ -104,20 +104,45 @@ require __DIR__ . '/../vendor/autoload.php';
 
 // $transaction->process();
 
-require '../app/Toaster.php';
-require '../app/Toaster_Pro.php';
+// require '../app/Toaster.php';
+// require '../app/Toaster_Pro.php';
 
-use App\Toaster;
-use App\ToasterPro;
+// use App\Toaster;
+// use App\ToasterPro;
 
-$toaster = new Toaster();
-$toasterpro = new ToasterPro();
+// $toaster = new Toaster();
+// $toasterpro = new ToasterPro();
 
-// $toaster->addSlice('bread');
-// $toaster->toast();
+// // $toaster->addSlice('bread');
+// // $toaster->toast();
 
-$toasterpro->addSlice('Bread');
-$toasterpro->addSlice('bread');
-$toasterpro->addSlice('bread');
-$toasterpro->toastBagle('somebeagle');
-$toasterpro->toast();
+// $toasterpro->addSlice('Bread');
+// $toasterpro->addSlice('bread');
+// $toasterpro->addSlice('bread');
+// $toasterpro->toastBagle('somebeagle');
+// $toasterpro->toast();
+
+require '../app/Abstraction/Field.php';
+require '../app/Abstraction/Text.php';
+// require '../app/Abstraction/Checkbox.php';
+// require '../app/Abstraction/Boolean.php';
+// require '../app/Abstraction/Radio.php';
+
+use App\Abstraction\Boolean;
+use App\Abstraction\Checkbox;
+use App\Abstraction\Field;
+use App\Abstraction\Radio;
+use App\Abstraction\Text;
+
+$fields = [
+    new Field('baseField'),
+    new Text('textField'),
+    // new Boolean('booleanField'),
+    // new Checkbox('checkboxField'),
+    // new Radio('radioField'),
+];
+
+foreach ($fields as $field) {
+    # code...
+    echo $field->render() . '<br />';
+}

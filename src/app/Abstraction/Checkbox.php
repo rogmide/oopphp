@@ -2,14 +2,13 @@
 
 namespace App\Abstraction;
 
-class Checkbox extends Boolean
+class Checkbox extends Field
 {
-
     public function render()
     {
         return <<<HTML
-        
-        <input type="text" name="{$this->name}" />
+
+        <input type="checkbox" name="{$this->name}" />
 
         HTML;
     }

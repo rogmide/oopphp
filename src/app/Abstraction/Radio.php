@@ -2,7 +2,7 @@
 
 namespace App\Abstraction;
 
-class Radio extends Boolean
+class Radio extends Booleans
 {
 
     public function render()

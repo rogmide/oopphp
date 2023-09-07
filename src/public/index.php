@@ -124,11 +124,11 @@ require __DIR__ . '/../vendor/autoload.php';
 
 require '../app/Abstraction/Field.php';
 require '../app/Abstraction/Text.php';
-// require '../app/Abstraction/Checkbox.php';
-// require '../app/Abstraction/Boolean.php';
-// require '../app/Abstraction/Radio.php';
+require '../app/Abstraction/Checkbox.php';
+require '../app/Abstraction/Booleans.php';
+require '../app/Abstraction/Radio.php';
 
-use App\Abstraction\Boolean;
+use App\Abstraction\Booleans;
 use App\Abstraction\Checkbox;
 use App\Abstraction\Field;
 use App\Abstraction\Radio;
@@ -137,9 +137,9 @@ use App\Abstraction\Text;
 $fields = [
     new Field('baseField'),
     new Text('textField'),
-    // new Boolean('booleanField'),
-    // new Checkbox('checkboxField'),
-    // new Radio('radioField'),
+    new Booleans('booleanField'),
+    new Checkbox('checkboxField'),
+    new Radio('radioField'),
 ];
 
 foreach ($fields as $field) {

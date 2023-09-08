@@ -1,5 +1,14 @@
 {
     "require": {
-        "ramsey/uuid": "^4.7"
+        "ext-pdo": "*",
+        "vlucas/phpdotenv": "^5.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true
     }
 }

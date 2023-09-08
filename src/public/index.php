@@ -2,7 +2,6 @@
 
 // phpinfo();
 
-require __DIR__ . '/../vendor/autoload.php';
 
 // require_once 'Transaction.php';
 
@@ -151,8 +150,14 @@ require __DIR__ . '/../vendor/autoload.php';
 
 // echo $collector->collect(100);
 
-require '../app/DebtCollectionService.php';
-require '../app/Interfaces/DebtCollector.php';
+// require '../app/DebtCollectionService.php';
+// require '../app/Interfaces/DebtCollector.php';
+// $service = new \App\DebtCollectionService();
+
+// $service->collectDebt(new \App\Interfaces\DebtCollector());
+
+require __DIR__ . '/../vendor/autoload.php';
+
 $service = new \App\DebtCollectionService();
 
-$service->collectDebt(new \App\Interfaces\DebtCollector());
+var_dump($service);

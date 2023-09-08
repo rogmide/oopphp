@@ -2,15 +2,18 @@
 
 namespace App\Interfaces;
 
+require 'DebtCollector.php';
+
 class CollectionAgency implements DebtCollector
 {
 
-    public function __construct()
-    {
-    }
+    // public function __construct()
+    // {
+    // }
 
     public function collect($owedAmount)
     {
-        return 1.2;
+        $guarnteed = $owedAmount * 0.5;
+        return mt_rand($guarnteed, $owedAmount);
     }
 }

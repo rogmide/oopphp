@@ -123,24 +123,30 @@ require __DIR__ . '/../vendor/autoload.php';
 // $toasterpro->toast();
 
 
-require '../app/Abstraction/Text.php';
-require '../app/Abstraction/Checkbox.php';
-require '../app/Abstraction/Radio.php';
+// require '../app/Abstraction/Text.php';
+// require '../app/Abstraction/Checkbox.php';
+// require '../app/Abstraction/Radio.php';
 
 
 
-use App\Abstraction\Checkbox;
-use App\Abstraction\Radio;
-use App\Abstraction\Text;
+// use App\Abstraction\Checkbox;
+// use App\Abstraction\Radio;
+// use App\Abstraction\Text;
 
-$fields = [
+// $fields = [
 
-    new Text('textField'),
-    new Checkbox('checkboxField'),
-    new Radio('radioField'),
-];
+//     new Text('textField'),
+//     new Checkbox('checkboxField'),
+//     new Radio('radioField'),
+// ];
 
-foreach ($fields as $field) {
-    # code...
-    echo $field->render() . '<br />';
-}
+// foreach ($fields as $field) {
+//     # code...
+//     echo $field->render() . '<br />';
+// }
+
+require '../app/Interfaces/CollectionAgency.php';
+$collector = new App\Interfaces\CollectionAgency();
+
+
+echo $collector->collect(100);

@@ -145,8 +145,14 @@ require __DIR__ . '/../vendor/autoload.php';
 //     echo $field->render() . '<br />';
 // }
 
-require '../app/Interfaces/CollectionAgency.php';
-$collector = new App\Interfaces\CollectionAgency();
+// require '../app/Interfaces/CollectionAgency.php';
+// $collector = new App\Interfaces\CollectionAgency();
 
 
-echo $collector->collect(100);
+// echo $collector->collect(100);
+
+require '../app/DebtCollectionService.php';
+require '../app/Interfaces/DebtCollector.php';
+$service = new \App\DebtCollectionService();
+
+$service->collectDebt(new \App\Interfaces\DebtCollector());
